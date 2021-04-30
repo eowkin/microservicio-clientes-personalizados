@@ -41,11 +41,11 @@ public class ClientePersonalizadoController {
 	
 	
 	/**
-	 * Nombre: crearLimitesGenerales 
-	 * Descripcion: Invocar metodo para ingresar limite nuevo
+	 * Nombre: listClientePersonalizado 
+	 * Descripcion: Invocar metodo para listar Clientes Personalizados
+	 * por los parametros enviados.
 	 * 
-	 * @param limitesGeneralesRequestCrear     Objeto tipo LimitesGeneralesRequestCrear 
-	 * @param result Objeto tipo BindingResult 
+	 * @param request     Objeto tipo ClientesPersonalizadosRequestConsulta   
 	 * @param requestHTTP Objeto tipo HttpServletRequest
 	 * @return ResponseEntity<Object>
 	 * @version 1.0
@@ -83,10 +83,10 @@ public class ClientePersonalizadoController {
 	
 	
 	/**
-	 * Nombre: crearLimitesGenerales 
-	 * Descripcion: Invocar metodo para ingresar limite nuevo
+	 * Nombre: crearClientePersonalizado 
+	 * Descripcion: Invocar metodo para ingresar Cliente Personalizados nuevo
 	 * 
-	 * @param limitesGeneralesRequestCrear     Objeto tipo LimitesGeneralesRequestCrear 
+	 * @param request     Objeto tipo ClientesPersonalizadosRequestCrear  
 	 * @param result Objeto tipo BindingResult 
 	 * @param requestHTTP Objeto tipo HttpServletRequest
 	 * @return ResponseEntity<Object>
@@ -126,11 +126,11 @@ public class ClientePersonalizadoController {
 	
 	
 	/**
-	 * Nombre: crearLimitesGenerales 
-	 * Descripcion: Invocar metodo para ingresar limite nuevo
+	 * Nombre: actualizarClientePersonalizado 
+	 * Descripcion: Invocar metodo para actualizar un Cliente Personalizado
 	 * 
-	 * @param limitesGeneralesRequestCrear     Objeto tipo LimitesGeneralesRequestCrear 
-	 * @param result Objeto tipo BindingResult 
+	 * @param request     Objeto tipo ClientesPersonalizadosRequestCrear  
+	 * @param result      Objeto tipo BindingResult 
 	 * @param requestHTTP Objeto tipo HttpServletRequest
 	 * @return ResponseEntity<Object>
 	 * @version 1.0

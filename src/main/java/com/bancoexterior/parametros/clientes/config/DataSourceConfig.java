@@ -29,8 +29,8 @@ public class DataSourceConfig {
 	@Value("${spring.datasource.password}")
 	private String password;
 	
-	@Value("${${microservicio.ambiente}"+".seed.moneda}")
-    private String seedMoneda;
+	@Value("${${microservicio.ambiente}"+".seed.clientePersonalizado}")
+    private String seedClientePersonalizado;
 	
 	@Value("${sconfig.deskey}")
     private String sconfigDesKey;
@@ -50,7 +50,7 @@ public class DataSourceConfig {
     	LOGGER.info(password);
     	LOGGER.info(sconfigDesKey);
     	LOGGER.info(sconfigProKey);
-    	LOGGER.info(seedMoneda);
+    	LOGGER.info(seedClientePersonalizado);
     	
     	
     	String usuarioEncryptBanco = MiCipher.encrypt("C14405", sconfigDesKey);
