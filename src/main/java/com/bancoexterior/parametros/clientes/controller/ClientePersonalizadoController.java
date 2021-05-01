@@ -24,7 +24,7 @@ import com.bancoexterior.parametros.clientes.dto.ClientesPersonalizadosDtoRespon
 import com.bancoexterior.parametros.clientes.dto.ClientesPersonalizadosRequestConsulta;
 import com.bancoexterior.parametros.clientes.dto.ClientesPersonalizadosRequestCrear;
 import com.bancoexterior.parametros.clientes.service.IClientesPersonalizadosService;
-import com.bancoexterior.parametros.clientes.util.Utils;
+import com.bancoexterior.parametros.clientes.util.LibreriaUtils;
 import com.bancoexterior.parametros.clientes.validator.IClientesPersonalizadosValidator;
 
 @RestController
@@ -67,7 +67,7 @@ public class ClientePersonalizadoController {
 		HttpStatus estatusCM;
 		
 		response = clientePersonalizadoService.consultarClientesPer(request);
-		estatusCM = Utils.getHttpStatus(response.getResultado().getCodigo().trim());
+		estatusCM = LibreriaUtils.getHttpStatus(response.getResultado().getCodigo().trim());
 		
 		LOGGER.info(estatusCM);
 		LOGGER.info(response);
@@ -110,7 +110,7 @@ public class ClientePersonalizadoController {
 		HttpStatus estatusCM;
 		
 		response = clientePersonalizadoService.crear(request, requestHTTP);
-		estatusCM = Utils.getHttpStatus(response.getResultado().getCodigo().trim());
+		estatusCM = LibreriaUtils.getHttpStatus(response.getResultado().getCodigo().trim());
 		
 		LOGGER.info(estatusCM);
 		LOGGER.info(response);
@@ -153,7 +153,7 @@ public class ClientePersonalizadoController {
 		HttpStatus estatusCM;
 		
 		response = clientePersonalizadoService.actualizar(request, requestHTTP);
-		estatusCM = Utils.getHttpStatus(response.getResultado().getCodigo().trim());
+		estatusCM = LibreriaUtils.getHttpStatus(response.getResultado().getCodigo().trim());
 		
 		LOGGER.info(estatusCM);
 		LOGGER.info(response);

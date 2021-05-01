@@ -8,7 +8,7 @@ public class Codigos {
 	public class Ambientes{
 		
 		private Ambientes() {
-			
+			super();
 		}
 		
 		public static final String DESARROLLO = "des";
@@ -20,7 +20,7 @@ public class Codigos {
 	public class CodRespuesta{
 		
 		private CodRespuesta() {
-			
+			super();
 		}
 		
 		//ok
@@ -59,7 +59,7 @@ public class Codigos {
 	public class Annotation{
 		 
 		private Annotation() {
-			
+			super();
 		}
 		public static final String OBJECTDEFAULT     = "[Objeto vacio]";
 		 public static final String FECHADEFAULT      = "[Fecha invalida]";
@@ -69,7 +69,7 @@ public class Codigos {
 	public class ParamConfig{
 		
 		private ParamConfig() {
-			
+			super();
 		}
 		public static final String CANAL           = "^[a-zA-Z\\-0-9]{1,4}$";
 		public static final String IDSESIONVALID   = "uuuuMMddHHmmss";
@@ -86,7 +86,7 @@ public class Codigos {
 	public class Constantes{
 		
 		private Constantes() {
-			
+			super();
 		}
 		public static final String MONEDADEFAULT                      = "000";
 		public static final String TRUE                               = "true";
@@ -117,7 +117,7 @@ public class Codigos {
 	public class Servicios{
 		
 		private Servicios() {
-			
+			super();
 		}
 		//monedas
 		public static final String CLIENTEPERSONALIZADOSURLV1       = "/v1/divisas/clientes";
@@ -164,7 +164,7 @@ public class Codigos {
 	public class ExceptionMessages{
 		
 		private ExceptionMessages() {
-			
+			super();
 		}
 		
 		public static final String UNIRESTHTTPE         = "HttpStatusCodeException: %1$s";
@@ -179,7 +179,7 @@ public class Codigos {
 	
 	public class InfoMessages {
 		private InfoMessages() {
-			
+			super();
 		}
 		
 		// Auditoria Service
@@ -187,7 +187,21 @@ public class Codigos {
     	public static final String AUPRINTINFO              = "registrar Auditoria respuesta: ";
 	}
 		
+	public class SQLUtils{
 		
+		private SQLUtils() {
+			super();
+		}
+		
+		public static final String SELECTCLIENTESPERSONALIZADOS ="SELECT cod_ibs, nro_id_cliente, nombre_rif, flag_activo, cod_usuario, fecha_modificacion, fecha_ingreso "
+				+ "FROM \"Convenio1\".\"Clientes_personalizados\" "
+				+ "where cod_ibs= (case when ?1 = '' then cod_ibs else ?1 end) "
+				+ "and nro_id_cliente = (case when ?2 = '' then nro_id_cliente else ?2 end) "
+				+ "and nombre_rif = (case when ?3 = '' then nombre_rif else ?3 end) "
+				+ "and case when  ?4 = 'si' then flag_activo = ?5 else flag_activo = flag_activo end";
+			  
+				
+	}		
 		
 	
 	
